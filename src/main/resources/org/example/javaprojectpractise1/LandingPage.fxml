@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="529.0" prefWidth="692.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.LandingPage">
+   <!-- Existing components -->
+   <TextField fx:id="subjectField" layoutX="132.0" layoutY="73.0" />
+   <TextField fx:id="obtainedMarksField" layoutX="390.0" layoutY="73.0" />
+   <TextField fx:id="totalMarksField" layoutX="132.0" layoutY="125.0" />
+   <TextField fx:id="creditHoursField" layoutX="390.0" layoutY="125.0" />
+   <Label layoutX="59.0" layoutY="77.0" text="Subject" textFill="#2196f3" />
+   <Label layoutX="307.0" layoutY="77.0" text=" Marks" textFill="#2196f3" />
+   <Label layoutX="59.0" layoutY="129.0" text="Total Marks" textFill="#2196f3" />
+   <Label layoutX="307.0" layoutY="129.0" text="Credit Hours" textFill="#2196f3" />
+   <Label alignment="CENTER" contentDisplay="CENTER" layoutX="241.0" layoutY="14.0" prefHeight="36.0" prefWidth="211.0" text="CGPA Calculator" textFill="#0ca0eb">
+      <font>
+         <Font size="25.0" />
+      </font>
+   </Label>
+
+   <!-- New components added -->
+   <TableView fx:id="subjectsTable" layoutX="46.0" layoutY="215.0" prefHeight="240.0" prefWidth="600.0" style="-fx-text-fill: black;">
+      <columns>
+         <TableColumn fx:id="subjectColumn" prefWidth="300.0" style="-fx-alignment: CENTER; -fx-font-weight: bold;" text="Subject Name" />
+         <TableColumn fx:id="GPAColumn" prefWidth="300.0" style="-fx-alignment: CENTER; -fx-font-weight: bold;" text="GPA" />
+      </columns>
+   </TableView>
+   <HBox alignment="CENTER" layoutX="100.0" layoutY="610.0" spacing="15.0" />
+   <Button layoutX="563.0" layoutY="98.0" onAction="#handleAddSubjectAction" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Add Subject">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+   <Button layoutX="162.0" layoutY="470.0" onAction="#handleCalculateCGPAAction" style="-fx-background-color: #2ecc71; -fx-text-fill: white;" text="Calculate CGPA">
+      <font>
+         <Font size="16.0" />
+      </font>
+   </Button>
+   <Label layoutX="353.0" layoutY="470.0" prefHeight="35.0" prefWidth="117.0" text="Collective CGPA: " textFill="#a7c7c9">
+      <font>
+         <Font name="System Bold" size="12.0" />
+      </font>
+   </Label>
+   <Label fx:id="cgpaLabel" layoutX="502.0" layoutY="470.0" text="0.00" textFill="#e74c3c">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Label>
+</AnchorPane>

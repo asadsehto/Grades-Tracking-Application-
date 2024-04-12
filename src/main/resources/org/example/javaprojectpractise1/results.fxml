@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.LandingPage">
+    <children>
+        <VBox alignment="CENTER" layoutX="100.0" layoutY="50.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+            <children>
+                <Label text="CGPA Calculator" textFill="#2c3e50" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                    <font>
+                        <Font size="36.0" />
+                    </font>
+                </Label>
+                <TableView fx:id="subjectsTable" prefHeight="200.0" prefWidth="600.0">
+                    <columns>
+                        <TableColumn text="Subject Name" prefWidth="300.0" />
+                        <TableColumn text="GPA" prefWidth="300.0" />
+                    </columns>
+                </TableView>
+                <HBox alignment="CENTER" spacing="15.0">
+                    <children>
+                        <Label text="Collective CGPA: " textFill="#34495e" />
+                        <Label fx:id="cgpaLabel" text="0.00" textFill="#e74c3c">
+                            <font>
+                                <Font size="24.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <Button text="Add New Subject" style ="-fx-background-color: #3498db; -fx-text-fill: white;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+                <Button text="Calculate CGPA" style="-fx-background-color: #2ecc71; -fx-text-fill: white;">
+                    <font>
+                        <Font size="16.0" />
+                    </font>
+                </Button>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>
