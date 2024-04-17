@@ -86,7 +86,7 @@ public class LandingPage implements Initializable {
 
     private double calculateGPA(double obtainedMarks, double totalMarks) {
         double percentage = (obtainedMarks / totalMarks) * 100;
-        if (percentage >= 95) return 4.0;
+        if (percentage >= 93) return 4.0;
         else if (percentage >= 90) return 3.7;
         else if (percentage >= 85) return 3.3;
         else if (percentage >= 80) return 3.0;

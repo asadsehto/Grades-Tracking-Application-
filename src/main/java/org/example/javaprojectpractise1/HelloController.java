@@ -12,9 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
-
 import java.io.*;
-
 import static javafx.application.Application.launch;
 
 public class HelloController {
@@ -25,8 +23,6 @@ public class HelloController {
 
 
     // a login method that uses filing to store user details
-
-
 
 
 
