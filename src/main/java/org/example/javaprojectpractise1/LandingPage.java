@@ -34,6 +34,14 @@ public class LandingPage implements Initializable {
 
     @FXML
     private TextField subjectField, obtainedMarksField, totalMarksField, creditHoursField;
+    @FXML
+    private ListView<String> helpList = new ListView<>();
+
+    @FXML
+    private TextArea answerArea = new TextArea();
+
+    @FXML
+    private Button cgpaButton = new Button("CGPA");
 
     @FXML
     private ObservableList<Subject> subjects = FXCollections.observableArrayList();
@@ -108,7 +116,7 @@ public class LandingPage implements Initializable {
     @FXML
     public void signUp(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("signUp.fxml")));
-        Stage stage ;
+        Stage stage;
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -138,11 +146,11 @@ public class LandingPage implements Initializable {
             }
             if (count == 1) {
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LandingPage.fxml")));
-                Stage stage ;
+                Stage stage;
                 stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
-                stage.setTitle("Hello");
+                stage.setTitle("GRADES");
                 stage.setScene(scene);
                 stage.show();
             } else {
@@ -161,5 +169,33 @@ public class LandingPage implements Initializable {
                 e.printStackTrace();
             }
         }
+    }
+
+    public void cgpaCalculatorPageOpen(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("LandingPage.fxml")));
+        Stage stage;
+        stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("GRADES");
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
+    // create a method to load the help bot fxml file in the same window it does not open a new window
+
+    @FXML
+    private void openHelpBot(ActionEvent event) throws IOException {
+        // Load the help UI
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HelpBot.fxml")));
+        Stage stage;
+        stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Help Bot");
+        stage.setScene(scene);
+        stage.show();
+
     }
 }

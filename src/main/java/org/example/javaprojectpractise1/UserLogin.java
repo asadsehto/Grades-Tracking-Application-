@@ -47,7 +47,7 @@ public class UserLogin implements Initializable {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Hello");
+        stage.setTitle("WELCOME TO GRADES");
         stage.setScene(scene);
         stage.show();
     }

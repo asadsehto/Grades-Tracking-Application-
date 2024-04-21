@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TitledPane?>
+
+
+<AnchorPane maxHeight="-Infinity" fx:controller="org.example.javaprojectpractise1.HelpApp" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Accordion layoutX="43.0" fx:id="accordion" layoutY="26.0" prefHeight="166.0" prefWidth="527.0">
+            <panes>
+                <TitledPane fx:id="pane1" animated="false" text="What are the CS101 prerequisites?" onMouseClicked="#setAnswerForPane">
+                    <content>
+                        <Label fx:id="label1" />
+                    </content>
+                </TitledPane>
+                <TitledPane fx:id="pane2" animated="false" text="How many credits is CS102?" onMouseClicked="#setAnswerForPane">
+                    <content>
+                        <Label fx:id="label2" />
+                    </content>
+                </TitledPane>
+                <TitledPane fx:id="pane3" animated="false" text="Who teaches CS201?"  onMouseClicked="#setAnswerForPane">
+                    <content>
+                        <Label fx:id="label3" />
+                    </content>
+                </TitledPane>
+            </panes>
+        </Accordion>
+    </children>
+</AnchorPane>
+
