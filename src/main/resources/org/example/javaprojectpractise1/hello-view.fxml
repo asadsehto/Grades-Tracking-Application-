@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="327.0"
             prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.LandingPage">
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.UserLogin">
    <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="158.0" layoutY="14.0" text="Welcome To Grades"
           textFill="#0ca0eb">
       <font>

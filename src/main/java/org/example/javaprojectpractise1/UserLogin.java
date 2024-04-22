@@ -1,5 +1,5 @@
 package org.example.javaprojectpractise1;
-
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,14 +8,26 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
+
+import java.awt.desktop.OpenURIEvent;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import org.example.DBConnection.DBHandler;
 import java.io.*;
 import java.sql.Connection;
+import java.util.Objects;
 
 
 public class UserLogin implements Initializable {
+
+    @FXML
+    protected TextField Username = new TextField();
+
+    @FXML
+    protected TextField Password = new TextField();
+    protected String username = Username.getText();
+    protected String password = Password.getText();
     @FXML
     TextField textField = new TextField();
     @FXML
@@ -41,6 +53,88 @@ public class UserLogin implements Initializable {
         textField2.setStyle("-fx-text-inner-color: black;");
         handler = new DBHandler();
     }
+
+
+
+
+    @FXML
+    public void signUp(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("signUp.fxml")));
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Sign up");
+        stage.show();
+    }
+
+
+    @FXML
+    private void login(ActionEvent event) throws SQLException, IOException {
+        this.username = Username.getText();
+        this.password = Password.getText();
+
+        Connection connection = handler.getConnection();
+        String query = "SELECT * from userdetails where names = ? and password = ?";
+
+        try {
+            PreparedStatement pst = connection.prepareStatement(query);
+            pst.setString(1, username);
+            pst.setString(2, password);
+            ResultSet rs = pst.executeQuery();
+            int count = 0;
+            while (rs.next()) {
+                count = count + 1;
+            }
+            if (count == 1) {
+                Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomePage.fxml")));
+                Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+                Scene scene = new Scene(root);
+                stage.setScene(scene);
+                stage.setTitle("GRADES");
+              //  ObservableList<Subject> userSubjects = getGradesForUser(username);
+               // subjects.setAll(userSubjects);  // Replace the current content with user's subjects
+                //subjectsTable.setItems(subjects);
+                stage.show();
+                //ObservableList<Subject> userSubjects = getGradesForUser(username);
+                //subjectsTable.setItems(userSubjects);
+            } else {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                alert.setTitle("Error");
+                alert.setHeaderText("Invalid Username or Password");
+                alert.setContentText("Please enter correct username and password");
+                alert.showAndWait();
+            }
+        } catch (SQLException e) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Database Error");
+            alert.setHeaderText("Error occurred while accessing the database");
+            alert.setContentText(e.getMessage());
+            alert.showAndWait();
+            e.printStackTrace();
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     @FXML
     public void backToMain(ActionEvent event) throws IOException {
         Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
@@ -48,13 +142,10 @@ public class UserLogin implements Initializable {
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);
         stage.setScene(scene);
-        stage.setTitle("Hello");
+        stage.setTitle("WELCOME TO GRADES");
         stage.setScene(scene);
         stage.show();
     }
-    // add alert to show that the user has signed up successfully
-    // also add alert when password and confirm password do not match
-    // tell me exaclty where to add the alert of password and confirm password do not match
 
     @FXML
     public void signUpD(ActionEvent event) throws SQLException {
@@ -91,7 +182,6 @@ public class UserLogin implements Initializable {
         }
 
     }
-
     public String getGender(ActionEvent event) {
         String gen = "";
         if(radioM.isSelected())

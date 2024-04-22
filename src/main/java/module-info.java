@@ -3,6 +3,7 @@ module org.example.javaprojectpractise1 {
     requires javafx.fxml;
     requires java.sql;
     requires mysql.connector.j;
+    requires java.desktop;
 
 
     opens org.example.javaprojectpractise1 to javafx.fxml;
