@@ -4,32 +4,67 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TitledPane?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.control.Accordion?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" fx:controller="org.example.javaprojectpractise1.HelpApp" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.HelpApp">
     <children>
-        <Accordion layoutX="43.0" fx:id="accordion" layoutY="26.0" prefHeight="166.0" prefWidth="527.0">
+      <Label alignment="CENTER" layoutX="231.0" layoutY="14.0" prefHeight="40.0" prefWidth="137.0" text="FAQS" textFill="#c5c4c4">
+         <font>
+            <Font name="System Bold" size="27.0" />
+         </font>
+      </Label>
+        <Accordion fx:id="accordion" layoutX="-2.0" layoutY="90.0" prefHeight="309.0" prefWidth="600.0" style="-fx-background-color: #2D3447;">
             <panes>
-                <TitledPane fx:id="pane1" animated="false" text="What are the CS101 prerequisites?" onMouseClicked="#setAnswerForPane">
+                <TitledPane fx:id="pane1" animated="false" onMouseClicked="#setAnswerForPane" style="-fx-background-color: #2D3447;" text="What are the CS101 prerequisites?" textFill="#2b4f6b">
                     <content>
-                        <Label fx:id="label1" />
+                        <Label fx:id="label1" prefHeight="49.0" prefWidth="598.0" />
                     </content>
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
                 </TitledPane>
-                <TitledPane fx:id="pane2" animated="false" text="How many credits is CS102?" onMouseClicked="#setAnswerForPane">
+                <TitledPane fx:id="pane2" animated="false" onMouseClicked="#setAnswerForPane" text="How many credits is CS102?" textFill="#2b4f6b">
                     <content>
                         <Label fx:id="label2" />
                     </content>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
                 </TitledPane>
-                <TitledPane fx:id="pane3" animated="false" text="Who teaches CS201?"  onMouseClicked="#setAnswerForPane">
+                <TitledPane fx:id="pane3" animated="false" onMouseClicked="#setAnswerForPane" style="-fx-font-style: Bold;" text="Who teaches CS201?" textFill="#2b4f6b">
                     <content>
                         <Label fx:id="label3" />
                     </content>
+                    <font>
+                        <Font name="System Bold" size="12.0" />
+                    </font>
                 </TitledPane>
+            <TitledPane animated="false" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
+            <TitledPane animated="false" text="untitled">
+              <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+              </content>
+            </TitledPane>
             </panes>
         </Accordion>
     </children>
 </AnchorPane>
-

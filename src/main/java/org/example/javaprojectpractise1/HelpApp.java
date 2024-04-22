@@ -6,8 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
-import javafx.scene.layout.VBox;
-import javafx.stage.Stage;
 
 import java.awt.event.MouseEvent;
 
