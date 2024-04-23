@@ -7,12 +7,13 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.util.Objects;
 
-public class HomePage {
+public class HomePage   {
     // load landing page
     @FXML
     public void loadLandingPage(ActionEvent event) throws IOException {
@@ -44,5 +45,14 @@ public class HomePage {
         }
     }
 
+    @FXML
+    private void openCurses(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Courses.fxml")));
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Courses");
+        stage.show();
+    }
 
 }

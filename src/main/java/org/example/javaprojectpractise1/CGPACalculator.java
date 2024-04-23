@@ -12,6 +12,7 @@ import javafx.stage.Stage;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXMLLoader;
+
 import org.example.DBConnection.DBHandler;
 import java.io.IOException;
 import java.util.Objects;
@@ -83,16 +84,13 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         subjectsTable.refresh();
 
         // Insert the grade into the database
-        insertGrade(Username.getText(), subjectName, gpa);
+        insertGrade(super.username, subjectName, gpa);
     }
-
-
     @FXML
     private void handleCalculateCGPAAction() {
         double cgpa = calculateCGPA(subjects);
         cgpaLabel.setText(String.format("CGPA: %.2f", cgpa));
     }
-
     private double calculateCGPA(ObservableList<Subject> subjects) {
         double totalGradePoints = 0;
         double totalCreditHours = 0;
@@ -103,7 +101,6 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         }
         return totalCreditHours > 0 ? totalGradePoints / totalCreditHours : 0;
     }
-
     private double calculateGPA(double obtainedMarks, double totalMarks) {
         double percentage = (obtainedMarks / totalMarks) * 100;
         if (percentage >= 93) return 4.0;
@@ -126,15 +123,13 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         stage.setTitle("Dashboard");
         stage.show();
     }
-
-
     private void insertGrade(String username, String subjectName, double gpa) throws SQLException {
         Connection connection = handler.getConnection();
         String insertQuery = "INSERT INTO user_grades (username, subject_name, gpa) VALUES (?, ?, ?)";
 
         try {
             PreparedStatement pst = connection.prepareStatement(insertQuery);
-            pst.setString(1, username);
+            pst.setString(1, super.username);
             pst.setString(2, subjectName);
             pst.setDouble(3, gpa);
             pst.executeUpdate();
@@ -144,7 +139,6 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
             connection.close();
         }
     }
-
 
     private ObservableList<Subject> getGradesForUser(String username) throws SQLException {
         ObservableList<Subject> subjects = FXCollections.observableArrayList();
@@ -168,13 +162,11 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         }
         return subjects;
     }
-
     @FXML
     private void openHelpBot(ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("HelpBot.fxml"));
             Parent root = loader.load();
-
             Stage stage = new Stage();
             stage.setTitle("Help Bot");
             stage.setScene(new Scene(root));
@@ -188,6 +180,4 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
             alert.showAndWait();
         }
     }
-
-
 }

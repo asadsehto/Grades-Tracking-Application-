@@ -70,8 +70,8 @@ public class UserLogin implements Initializable {
 
     @FXML
     private void login(ActionEvent event) throws SQLException, IOException {
-        this.username = Username.getText();
-        this.password = Password.getText();
+        String username = Username.getText(); // Fetch username from TextField
+        String password = Password.getText(); // Fetch password from TextField
 
         Connection connection = handler.getConnection();
         String query = "SELECT * from userdetails where names = ? and password = ?";
@@ -86,17 +86,13 @@ public class UserLogin implements Initializable {
                 count = count + 1;
             }
             if (count == 1) {
+                this.username = username; // Set username at the class level
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomePage.fxml")));
                 Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.setTitle("GRADES");
-              //  ObservableList<Subject> userSubjects = getGradesForUser(username);
-               // subjects.setAll(userSubjects);  // Replace the current content with user's subjects
-                //subjectsTable.setItems(subjects);
                 stage.show();
-                //ObservableList<Subject> userSubjects = getGradesForUser(username);
-                //subjectsTable.setItems(userSubjects);
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
@@ -119,6 +115,7 @@ public class UserLogin implements Initializable {
             }
         }
     }
+
 
 
 
