@@ -3,18 +3,19 @@ package org.example.javaprojectpractise1;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.geometry.Insets;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.EnumMap;
-import java.util.List;
-import java.util.Map;
+import java.io.IOException;
+import java.util.*;
+
 import javafx.fxml.FXMLLoader;
 enum Semester {
     SEMESTER_1, SEMESTER_2, SEMESTER_3, SEMESTER_4,
@@ -201,5 +202,15 @@ public class CourseManagerFX extends Application {
         courseListView.setItems(courses);
     }
 
+    @FXML Button backButton;
+
+    @FXML
+    public void setBackButton(ActionEvent event) throws IOException {    Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomePage.fxml")));
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("GRADES");
+        stage.show();
+    }
 
 }

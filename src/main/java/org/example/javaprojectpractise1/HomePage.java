@@ -54,5 +54,23 @@ public class HomePage   {
         stage.setTitle("Courses");
         stage.show();
     }
+    @FXML
+    public void logOut(ActionEvent event) throws IOException {
+        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+        alert.setTitle("Log Out");
+        alert.setHeaderText("Are you sure you want to log out?");
+        alert.setContentText("Click OK to log out or Cancel to stay on the page.");
+        alert.showAndWait();
+        if (alert.getResult().getText().equals("OK")) {
+            Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
+            Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.setTitle("WELCOME TO GRADES");
+            stage.show();
+        } else {
+            alert.close();
+        }
+    }
 
 }

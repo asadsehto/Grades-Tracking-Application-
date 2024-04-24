@@ -18,6 +18,6 @@
         <Button fx:id="withdrawButton" layoutX="14.0" layoutY="364.0" mnemonicParsing="false" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Withdraw Course" />
         <ListView fx:id="courseListView" layoutX="14.0" layoutY="64.0" prefHeight="286.0" prefWidth="273.0" style="-fx-background-color: #2D3447;" />
       <ListView fx:id="courseListView1" layoutX="312.0" layoutY="52.0" prefHeight="286.0" prefWidth="273.0" style="-fx-background-color: #2D3447;" />
-      <Button fx:id="BackButton" layoutX="523.0" layoutY="364.0" mnemonicParsing="false" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Back" />
+      <Button fx:id="BackButton" onAction="#setBackButton" layoutX="523.0" layoutY="364.0" mnemonicParsing="false" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Back" />
     </children>
 </AnchorPane>

@@ -39,7 +39,7 @@
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="240.0" layoutY="349.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-border-color: black;" text="LOG OUT">
+      <Button layoutX="240.0" layoutY="349.0" onAction="#logOut" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-border-color: black;" text="LOG OUT">
          <font>
             <Font name="Arial" size="13.0" />
          </font>
