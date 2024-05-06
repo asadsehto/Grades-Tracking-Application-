@@ -25,9 +25,7 @@ public class UserLogin implements Initializable {
     protected TextField Username = new TextField();
 
     @FXML
-    protected TextField Password = new TextField();
-    protected String username = Username.getText();
-    protected String password = Password.getText();
+    protected PasswordField Password = new PasswordField();
     @FXML
     TextField textField = new TextField();
     @FXML
@@ -65,13 +63,19 @@ public class UserLogin implements Initializable {
         stage.setScene(scene);
         stage.setTitle("Sign up");
         stage.show();
-    }
 
+    }
+String username;
+    String password;
+
+    public String getUsername() {
+        return this.username;
+    }
 
     @FXML
     private void login(ActionEvent event) throws SQLException, IOException {
-        String username = Username.getText(); // Fetch username from TextField
-        String password = Password.getText(); // Fetch password from TextField
+         username = Username.getText(); // Fetch username from TextField
+        password = Password.getText();
 
         Connection connection = handler.getConnection();
         String query = "SELECT * from userdetails where names = ? and password = ?";
@@ -86,13 +90,13 @@ public class UserLogin implements Initializable {
                 count = count + 1;
             }
             if (count == 1) {
-                this.username = username; // Set username at the class level
                 Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomePage.fxml")));
                 Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
                 stage.setTitle("GRADES");
                 stage.show();
+
             } else {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
                 alert.setTitle("Error");
@@ -115,15 +119,6 @@ public class UserLogin implements Initializable {
             }
         }
     }
-
-
-
-
-
-
-
-
-
 
 
 

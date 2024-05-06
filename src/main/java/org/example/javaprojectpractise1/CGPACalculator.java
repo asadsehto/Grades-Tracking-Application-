@@ -45,6 +45,7 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
     @FXML
     private ObservableList<Subject> subjects = FXCollections.observableArrayList();
 
+    String name ;
 
 
     private DBHandler handler;
@@ -59,6 +60,7 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         subjectColumn.setMinWidth(200);
         GPAColumn.setCellValueFactory(cellData -> new ReadOnlyObjectWrapper<>(cellData.getValue().getGpa()));
         GPAColumn.setMinWidth(100);
+
     }
 
     @FXML
@@ -84,7 +86,8 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         subjectsTable.refresh();
 
         // Insert the grade into the database
-        insertGrade(super.username, subjectName, gpa);
+
+        insertGrade( getUsername(), subjectName, gpa);
     }
     @FXML
     private void handleCalculateCGPAAction() {
@@ -123,13 +126,13 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         stage.setTitle("Dashboard");
         stage.show();
     }
-    private void insertGrade(String username, String subjectName, double gpa) throws SQLException {
+    private void insertGrade(String name1, String subjectName, double gpa) throws SQLException {
         Connection connection = handler.getConnection();
         String insertQuery = "INSERT INTO user_grades (username, subject_name, gpa) VALUES (?, ?, ?)";
 
         try {
             PreparedStatement pst = connection.prepareStatement(insertQuery);
-            pst.setString(1, super.username);
+            pst.setString(1, name1);
             pst.setString(2, subjectName);
             pst.setDouble(3, gpa);
             pst.executeUpdate();
@@ -140,6 +143,7 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
         }
     }
 
+    @FXML
     private ObservableList<Subject> getGradesForUser(String username) throws SQLException {
         ObservableList<Subject> subjects = FXCollections.observableArrayList();
         Connection connection = handler.getConnection();
@@ -180,4 +184,5 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
             alert.showAndWait();
         }
     }
+
 }

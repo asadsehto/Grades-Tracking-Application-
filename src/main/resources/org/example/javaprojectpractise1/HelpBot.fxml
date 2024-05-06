@@ -15,7 +15,7 @@
       </Label>
         <Accordion fx:id="accordion" layoutX="-2.0" layoutY="90.0" prefHeight="309.0" prefWidth="600.0" style="-fx-background-color: #2D3447;">
             <panes>
-                <TitledPane fx:id="pane1" animated="false" onMouseClicked="#setAnswerForPane" style="-fx-background-color: #2D3447;" text="What are the CS101 prerequisites?" textFill="#2b4f6b">
+                <TitledPane fx:id="pane1" animated="false" onMouseClicked="#setAnswerForPane" style="-fx-background-color: #2D3447;" text="What does prerequisites mean?" textFill="#2b4f6b">
                     <content>
                         <Label fx:id="label1" prefHeight="49.0" prefWidth="598.0" />
                     </content>
@@ -23,15 +23,16 @@
                   <Font name="System Bold" size="12.0" />
                </font>
                 </TitledPane>
-                <TitledPane fx:id="pane2" animated="false" onMouseClicked="#setAnswerForPane" text="How many credits is CS102?" textFill="#2b4f6b">
+                <TitledPane fx:id="pane2" animated="false" onMouseClicked="#setAnswerForPane" text="what is a 3 + 1 credit hour ?" textFill="#2b4f6b">
                     <content>
                         <Label fx:id="label2" />
                     </content>
                     <font>
                         <Font name="System Bold" size="12.0" />
                     </font>
+                    
                 </TitledPane>
-                <TitledPane fx:id="pane3" animated="false" onMouseClicked="#setAnswerForPane" style="-fx-font-style: Bold;" text="Who teaches CS201?" textFill="#2b4f6b">
+                <TitledPane fx:id="pane3" animated="false" onMouseClicked="#setAnswerForPane" style="-fx-font-style: Bold;" text="Where is the CS HOD office?" textFill="#2b4f6b">
                     <content>
                         <Label fx:id="label3" />
                     </content>
@@ -39,7 +40,7 @@
                         <Font name="System Bold" size="12.0" />
                     </font>
                 </TitledPane>
-            <TitledPane animated="false" text="untitled">
+            <TitledPane animated="false" fx:id="pane4" text="How to withdraw courses" onMouseClicked="#setAnswerForPane">
               <content>
                 <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
               </content>

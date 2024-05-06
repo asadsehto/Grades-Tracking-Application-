@@ -6,7 +6,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.HomePage">
+<AnchorPane prefHeight="426.0" prefWidth="606.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.HomePage">
    <children>
       <Label alignment="CENTER" layoutX="140.0" layoutY="3.0" prefHeight="75.0" prefWidth="322.0" text="WELCOME TO GRADES" textFill="#0ca0eb">
          <font>
@@ -29,17 +29,17 @@
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="50.0" layoutY="259.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="QUIZZES">
+      <Button layoutX="50.0" layoutY="259.0" mnemonicParsing="false" onAction="#openResources" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="RESOURCES">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="350.0" layoutY="258.0" onAction="#openHelpBot" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="HELP BOT">
+      <Button layoutX="350.0" layoutY="258.0" mnemonicParsing="false" onAction="#openHelpBot" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="HELP BOT">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="240.0" layoutY="349.0" onAction="#logOut" mnemonicParsing="false" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-border-color: black;" text="LOG OUT">
+      <Button layoutX="240.0" layoutY="349.0" mnemonicParsing="false" onAction="#logOut" prefHeight="40.0" prefWidth="111.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0); -fx-border-color: black;" text="LOG OUT">
          <font>
             <Font name="Arial" size="13.0" />
          </font>

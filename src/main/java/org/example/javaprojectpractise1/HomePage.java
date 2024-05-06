@@ -73,4 +73,13 @@ public class HomePage   {
         }
     }
 
+    public  void openResources(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Resources.fxml")));
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("Resources");
+        stage.show();
+    }
+
 }
