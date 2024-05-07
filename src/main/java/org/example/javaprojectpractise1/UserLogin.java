@@ -141,7 +141,7 @@ String username;
 
     @FXML
     public void signUpD(ActionEvent event) throws SQLException {
-        String insert = "INSERT INTO userdetails( names , password, confirmpassword , gender)" + "VALUES (?,?,?,?)";
+        String insert = "INSERT INTO userdetails ( names , password, confirmpassword , gender)" + "VALUES (?,?,?,?)";
         connection = handler.getConnection();
         try {
             pst = connection.prepareStatement(insert);
