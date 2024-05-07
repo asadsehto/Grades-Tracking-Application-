@@ -44,6 +44,7 @@ class Course {
 
 public class CourseManagerFX extends Application {
     private Map<Semester, ObservableList<Course>> coursesBySemester;
+    private  Map<String,Course>courseMap;
 
     @FXML
     private ComboBox<Semester> semesterComboBox;
@@ -55,7 +56,7 @@ public class CourseManagerFX extends Application {
     private Button updateButton;
 
     @FXML
-    private Button withdrawButton;
+    public Button withdrawButton;
 
     public CourseManagerFX() {
         coursesBySemester = new EnumMap<>(Semester.class);
@@ -134,7 +135,7 @@ public class CourseManagerFX extends Application {
         courses.add(course);
     }
 
-    private void updatePrerequisites(Semester semester) {
+   /* private void updatePrerequisites(Semester semester) {
         for (int i = semester.ordinal() + 1; i < Semester.values().length; i++) {
             Semester nextSemester = Semester.values()[i];
             ObservableList<Course> nextSemesterCourses = coursesBySemester.get(nextSemester);
@@ -142,7 +143,33 @@ public class CourseManagerFX extends Application {
                 nextSemesterCourse.getPrerequisites().removeIf(prerequisite -> coursesBySemester.get(semester).contains(prerequisite));
             }
         }
+    }*/
+    private void updatePrerequisites(Semester semester) {
+        // Iterate through all semesters after the selected semester
+        for (int i = semester.ordinal() + 1; i < Semester.values().length; i++) {
+            Semester nextSemester = Semester.values()[i];
+            ObservableList<Course> nextSemesterCourses = coursesBySemester.get(nextSemester);
+
+            // Iterate through courses of the next semester
+            for (Course nextSemesterCourse : nextSemesterCourses) {
+                // Check if any of the prerequisites of the next semester course
+                // is present in the selected semester
+                boolean removeCourse = false;
+                for (Course prerequisite : nextSemesterCourse.getPrerequisites()) {
+                    if (coursesBySemester.get(semester).contains(prerequisite)) {
+                        removeCourse = true;
+                        break;
+                    }
+                }
+
+                // Remove the course if any of its prerequisites is withdrawn
+                if (removeCourse) {
+                    nextSemesterCourses.remove(nextSemesterCourse);
+                }
+            }
+        }
     }
+
 
     @FXML
     private void initialize() {
@@ -176,20 +203,25 @@ public class CourseManagerFX extends Application {
         Semester selectedSemester = semesterComboBox.getValue();
         updatePrerequisites(selectedSemester);
         updateListView();
+
+        System.out.println("Update");
     }
 
     @FXML
+
     private void withdrawCourseAction() {
         Semester selectedSemester = semesterComboBox.getValue();
         Course selectedCourse = courseListView.getSelectionModel().getSelectedItem();
         if (selectedCourse != null) {
             coursesBySemester.get(selectedSemester).remove(selectedCourse);
+            System.out.println(selectedCourse);
             // Update prerequisites for subsequent semesters
             for (int i = selectedSemester.ordinal() + 1; i < Semester.values().length; i++) {
                 Semester nextSemester = Semester.values()[i];
                 ObservableList<Course> nextSemesterCourses = coursesBySemester.get(nextSemester);
                 nextSemesterCourses.forEach(course -> course.getPrerequisites().removeIf(prerequisite -> prerequisite.getName().equals(selectedCourse.getName())));
             }
+
             updateListView();
         }
     }
