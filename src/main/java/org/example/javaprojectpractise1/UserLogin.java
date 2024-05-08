@@ -94,6 +94,7 @@ String username;
                 Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
                 Scene scene = new Scene(root);
                 stage.setScene(scene);
+
                 stage.setTitle("GRADES");
                 stage.show();
 
@@ -120,16 +121,9 @@ String username;
         }
     }
 
-
-
-
-
-
-
-
     @FXML
     public void backToMain(ActionEvent event) throws IOException {
-        Parent root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("hello-view.fxml")));
         Stage stage = new Stage();
         stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
         Scene scene = new Scene(root);

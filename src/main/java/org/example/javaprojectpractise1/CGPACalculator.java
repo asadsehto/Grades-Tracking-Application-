@@ -38,6 +38,8 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
     @FXML
     private TextField subjectField, obtainedMarksField, totalMarksField, creditHoursField;
 
+   @FXML
+   TextField Yourname = new TextField();
 
     @FXML
     private Button cgpaButton = new Button("CGPA");
@@ -87,7 +89,7 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
 
         // Insert the grade into the database
 
-        insertGrade( getUsername(), subjectName, gpa);
+        insertGrade(Yourname.getText() , subjectName, gpa);
     }
     @FXML
     private void handleCalculateCGPAAction() {
@@ -184,5 +186,6 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
             alert.showAndWait();
         }
     }
+
 
 }

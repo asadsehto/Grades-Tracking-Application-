@@ -11,7 +11,7 @@
 <?import javafx.scene.shape.Line?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="610.0" prefWidth="677.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.CGPACalculator">
+<AnchorPane prefHeight="610.0" prefWidth="668.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.CGPACalculator">
 
    <!-- Existing components -->
    <TextField fx:id="subjectField" layoutX="262.0" layoutY="73.0" prefHeight="25.0" prefWidth="107.0" />
@@ -36,7 +36,7 @@
       </columns>
    </TableView>
    <HBox alignment="CENTER" layoutX="100.0" layoutY="610.0" spacing="15.0" />
-   <Button layoutX="315.0" layoutY="187.0" onAction="#handleAddSubjectAction" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Add Subject">
+   <Button layoutX="504.0" layoutY="178.0" onAction="#handleAddSubjectAction" style="-fx-background-color: #3498db; -fx-text-fill: white;" text="Add Subject">
       <font>
          <Font size="16.0" />
       </font>
@@ -72,4 +72,6 @@
          <Button fx:id="cgpaButton1" layoutX="12.0" layoutY="19.0" mnemonicParsing="false" onAction="#loadHomePage" prefHeight="29.0" prefWidth="87.0" style="-fx-background-color: transparent; -fx-text-fill: white; -fx-font-size: 14px;" />
       </children>
    </Pane>
+   <TextField layoutX="263.0" fx:id="Yourname" layoutY="178.0" prefHeight="25.0" prefWidth="107.0" />
+   <Label  layoutX="174.0" layoutY="182.0" text="Your Name" textFill="#2196f3" />
 </AnchorPane>

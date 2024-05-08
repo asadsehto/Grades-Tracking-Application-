@@ -7,22 +7,22 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="353.0" prefWidth="678.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.UserLogin">
-   <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="187.0" layoutY="53.0" text="Welcome To Grades" textFill="#0ca0eb">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="346.0" prefWidth="694.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.UserLogin">
+   <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="203.0" layoutY="50.0" text="Login Grades Account" textFill="#0ca0eb">
       <font>
          <Font name="Bookman Old Style" size="32.0" />
       </font>
    </Label>
-   <Button layoutX="411.0" layoutY="234.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="57.0" text="Login" textFill="#2196f3" />
-   <Button layoutX="303.0" layoutY="234.0" mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="57.0" text="Sign up" textFill="#2196f3" />
-   <TextField fx:id="Username" layoutX="303.0" layoutY="129.0" prefHeight="23.0" prefWidth="167.0" promptText="username" />
-   <PasswordField fx:id="Password" layoutX="303.0" layoutY="177.0" prefHeight="25.0" prefWidth="167.0" promptText="password" />
-   <Label layoutX="197.0" layoutY="133.0" text="Username" textFill="#2196f3">
+   <Button layoutX="428.0" layoutY="234.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="57.0" text="Login" textFill="#2196f3" />
+   <Button layoutX="319.0" layoutY="234.0" mnemonicParsing="false" onAction="#signUp" prefHeight="25.0" prefWidth="57.0" text="Sign up" textFill="#2196f3" />
+   <TextField fx:id="Username" layoutX="319.0" layoutY="129.0" prefHeight="23.0" prefWidth="167.0" promptText="username" />
+   <PasswordField fx:id="Password" layoutX="319.0" layoutY="177.0" prefHeight="25.0" prefWidth="167.0" promptText="password" />
+   <Label layoutX="232.0" layoutY="133.0" text="Username" textFill="#2196f3">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
    </Label>
-   <Label layoutX="198.0" layoutY="181.0" text="Password" textFill="#2196f3">
+   <Label layoutX="233.0" layoutY="181.0" text="Password" textFill="#2196f3">
       <font>
          <Font name="System Bold" size="12.0" />
       </font>
