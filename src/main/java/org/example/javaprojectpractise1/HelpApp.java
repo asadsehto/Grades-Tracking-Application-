@@ -1,13 +1,20 @@
 package org.example.javaprojectpractise1;
 
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Accordion;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TitledPane;
+import javafx.stage.Stage;
 
 import java.awt.event.MouseEvent;
+import java.io.IOException;
+import java.util.Objects;
 
 public class HelpApp  {
 
@@ -67,6 +74,15 @@ public class HelpApp  {
         Label label = (Label) pane.getContent();
         String answer = getAnswerForQuestion(question);
         label.setText(answer);
+    }
+    @FXML
+    private void Backkhome(ActionEvent event) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("HomePage.fxml")));
+        Stage stage = (Stage) ((Button) event.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.setTitle("HomePage");
+        stage.show();
     }
 
 }
