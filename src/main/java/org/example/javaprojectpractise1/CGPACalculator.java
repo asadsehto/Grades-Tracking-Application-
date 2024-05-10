@@ -149,11 +149,11 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
     private ObservableList<Subject> getGradesForUser(String username) throws SQLException {
         ObservableList<Subject> subjects = FXCollections.observableArrayList();
         Connection connection = handler.getConnection();
-        String selectQuery = "SELECT subject_name, gpa FROM user_grades WHERE username = ?";
+        String selectQuery = "SELECT subject_name, gpa FROM user_grades WHERE username = 'asad'";
 
         try {
             PreparedStatement pst = connection.prepareStatement(selectQuery);
-            pst.setString(1, username);
+          //  pst.setString(1, username);
             ResultSet rs = pst.executeQuery();
 
             while (rs.next()) {
@@ -186,6 +186,4 @@ public class CGPACalculator  extends UserLogin implements Initializable  {
             alert.showAndWait();
         }
     }
-
-
 }
