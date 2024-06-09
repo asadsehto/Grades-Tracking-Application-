@@ -13,43 +13,43 @@
                 <Font name="Arial Bold" size="24.0" />
             </font>
         </Label>
-        <Label alignment="CENTER"   layoutX="10.0" layoutY="376.0" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: white;" text="BACK" textFill="#0ca0eb">
+        <Label alignment="CENTER" layoutX="10.0" layoutY="376.0" prefHeight="36.0" prefWidth="80.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: white;" text="BACK" textFill="#0ca0eb">
             <font>
                 <Font name="Arial Bold" size="19.0" />
             </font>
         </Label>
         <Line endX="600.0" endY="0.0" layoutX="0.0" layoutY="78.0" startX="0.0" startY="0.0" stroke="#0ca0eb" strokeWidth="2.0" />
-        <Button layoutX="50.0" layoutY="130.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-border-color: black; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Sample Papers">
+        <Button layoutX="50.0" layoutY="130.0" mnemonicParsing="false" onAction="#CSlink" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-border-color: black; -fx-text-fill: white; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="CS portal">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button layoutX="350.0" layoutY="130.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Quizes">
+        <Button layoutX="350.0" layoutY="130.0" mnemonicParsing="false" onAction="#handleLinks" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Links">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button layoutX="50.0" layoutY="213.0" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Online Links">
+        <Button layoutX="50.0" layoutY="213.0" mnemonicParsing="false" onAction="#handlestdAssessment" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Student Assessments">
+            <font>
+                <Font name="Arial" size="18.0" />
+            </font>
+        </Button>
+        <Button layoutX="350.0" layoutY="213.0" mnemonicParsing="false" onAction="#handleGradingPolicyButton" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Grading Policy">
             <font>
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button layoutX="350.0" layoutY="213.0" mnemonicParsing="false"  prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Grading Policy">
-            <font>
-                <Font name="Arial" size="19.0" />
-            </font>
-        </Button>
-      <Button layoutX="15.0" layoutY="371.0" onAction="#backToHome" mnemonicParsing="false"  prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
-      <Button layoutX="350.0" layoutY="297.0" onAction="#cmsPortal" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="CMS Portal">
+      <Button layoutX="15.0" layoutY="371.0" mnemonicParsing="false" onAction="#backToHome" prefHeight="36.0" prefWidth="70.0" style="-fx-background-color: transparent;" />
+      <Button layoutX="350.0" layoutY="297.0" mnemonicParsing="false" onAction="#cmsPortal" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="CMS Portal">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-      <Button layoutX="50.0" layoutY="297.0" onAction="#openelearning" mnemonicParsing="false" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="E-Learning">
+      <Button layoutX="50.0" layoutY="297.0" mnemonicParsing="false" onAction="#openelearning" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="E-Learning">
          <font>
             <Font name="Arial" size="19.0" />
          </font>
       </Button>
-        
+
     </children>
 </AnchorPane>

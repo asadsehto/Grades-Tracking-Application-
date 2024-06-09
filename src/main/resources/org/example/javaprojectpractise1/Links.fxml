@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="712.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.Links">
+   <children>
+      <Hyperlink layoutX="23.0" layoutY="45.0" onAction="#CourseraLink" prefHeight="34.0" prefWidth="85.0" text="1. Coursera" />
+      <Label layoutX="14.0" layoutY="11.0" lineSpacing="6.0" opacity="0.79" prefHeight="34.0" prefWidth="86.0" text="Resources" textFill="#0f2440" underline="true">
+         <font>
+            <Font name="Bookman Old Style" size="15.0" />
+         </font></Label>
+      <Label layoutX="30.0" layoutY="79.0" prefHeight="34.0" prefWidth="562.0" text="Offers online courses from top universities and companies. Topics range from programming and data structures to machine learning and AI." wrapText="true" />
+      <Hyperlink layoutX="25.0" layoutY="125.0" onAction="#edXLink" prefHeight="24.0" prefWidth="94.0" text="2. edX" />
+      <Label layoutX="29.0" layoutY="149.0" prefHeight="34.0" prefWidth="562.0" text="Provides access to free courses from universities like MIT and Harvard. Many courses offer certificates upon completion." wrapText="true" />
+      <Hyperlink layoutX="23.0" layoutY="193.0" onAction="#KhanAcademyLink" prefHeight="24.0" prefWidth="116.0" text="3. Khan Academy" />
+      <Label layoutX="30.0" layoutY="217.0" prefHeight="34.0" prefWidth="562.0" text="Offers free tutorials in a variety of subjects, including computer science, programming, and mathematics." wrapText="true" />
+      <Hyperlink layoutX="23.0" layoutY="251.0" onAction="#CodeAcademy" prefHeight="24.0" prefWidth="116.0" text="4. Codecademy" />
+      <Hyperlink layoutX="23.0" layoutY="311.0" onAction="#Geek4geeks" prefHeight="24.0" prefWidth="116.0" text="5. GeeksforGeeks" />
+      <Hyperlink layoutX="23.0" layoutY="383.0" onAction="#HackerRankLink" prefHeight="23.0" prefWidth="116.0" text="6.Hacker Rank" />
+      <Hyperlink layoutX="23.0" layoutY="441.0" onAction="#LeetCodeLink" prefHeight="18.0" prefWidth="116.0" text="7. Leet code" />
+      <Hyperlink layoutX="23.0" layoutY="496.0" onAction="#StackOverFLowlink" prefHeight="24.0" prefWidth="116.0" text="8. Stack OverFlow" />
+      <Hyperlink layoutX="23.0" layoutY="564.0" onAction="#GithubLink" prefHeight="24.0" prefWidth="116.0" text="9. Github" />
+      <Hyperlink layoutX="23.0" layoutY="629.0" onAction="#W3schoolLink" prefHeight="24.0" prefWidth="116.0" text="10. W3schools " />
+      <Label layoutX="29.0" layoutY="275.0" prefHeight="34.0" prefWidth="562.0" text="An interactive platform that offers free coding classes in various programming languages including Python, Java, JavaScript, and more." wrapText="true" />
+      <Label layoutX="30.0" layoutY="335.0" prefHeight="34.0" prefWidth="562.0" text="A comprehensive resource for learning programming languages, data structures, algorithms, and interview preparation." wrapText="true" />
+      <Label layoutX="30.0" layoutY="407.0" prefHeight="34.0" prefWidth="562.0" text="A platform for practicing coding skills, preparing for interviews, and competing in coding challenges." wrapText="true" />
+      <Label layoutX="30.0" layoutY="465.0" prefHeight="34.0" prefWidth="562.0" text="Offers coding challenges that help prepare for technical interviews, with problems that range from easy to hard." wrapText="true" />
+      <Label layoutX="30.0" layoutY="520.0" prefHeight="34.0" prefWidth="572.0" text="A community-driven Q&amp;A website where you can ask questions and share knowledge on a wide range of programming topics." wrapText="true" />
+      <Label layoutX="30.0" layoutY="588.0" prefHeight="34.0" prefWidth="562.0" text="A platform for version control and collaboration, hosting millions of open-source projects. Great for sharing your projects and contributing to others." wrapText="true" />
+      <Label layoutX="29.0" layoutY="653.0" prefHeight="34.0" prefWidth="562.0" text="A web developer's site with tutorials and references on web development languages such as HTML, CSS, JavaScript, PHP, SQL, and more." wrapText="true" />
+      <Button layoutX="525.0" layoutY="684.0" onAction="#closebuttonHandle"  style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" mnemonicParsing="false" prefHeight="24.0" prefWidth="66.0" text="Close" textFill="#1c3273" />
+   </children>
+</AnchorPane>
