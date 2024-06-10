@@ -29,7 +29,7 @@
                 <Font name="Arial" size="19.0" />
             </font>
         </Button>
-        <Button layoutX="50.0" layoutY="213.0" mnemonicParsing="false" onAction="#handlestdAssessment" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Student Assessments">
+        <Button layoutX="50.0" layoutY="213.0" mnemonicParsing="false" onAction="#handlestdAssessment" prefHeight="50.0" prefWidth="200.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Assessments">
             <font>
                 <Font name="Arial" size="18.0" />
             </font>

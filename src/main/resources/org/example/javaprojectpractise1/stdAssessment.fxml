@@ -5,11 +5,15 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="373.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.Resources">
+<AnchorPane prefHeight="373.0" prefWidth="591.0" style="-fx-background-color: #2D3447;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.Resources">
    <children>
-      <Label layoutX="10.0" layoutY="14.0" opacity="0.63" prefHeight="150.0" prefWidth="571.0" text="The performance of students is evaluated through a system of continuous testing spread over the entire period of studies. In addition to the final examination given at the end of each semester, students are tested through two term examinations, a series of short quizzes, class discussions, written assignments, research reports, etc., all of which contribute to the final grade. Term examinations are administered twice in a semester (Spring/Fall). . A student sits through two such examinations for each course every semester. A number of quizzes are taken during the semester to monitor the performance of the students. To rate students' academic performance &amp; (CGPA) is computed at the end of Semester." wrapText="true" />
-      <ImageView fitHeight="169.0" fitWidth="477.0" layoutX="57.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+      <Label layoutX="11.0" layoutY="12.0" opacity="0.63" prefHeight="150.0" prefWidth="571.0" style="-fx-background-color: transparent; -fx-border-color: black; -fx-text-fill: white;" text="The performance of students is evaluated through a system of continuous testing spread over the entire period of studies. In addition to the final examination given at the end of each semester, students are tested through two term examinations, a series of short quizzes, class discussions, written assignments, research reports, etc., all of which contribute to the final grade. Term examinations are administered twice in a semester (Spring/Fall). . A student sits through two such examinations for each course every semester. A number of quizzes are taken during the semester to monitor the performance of the students. To rate students' academic performance &amp; (CGPA) is computed at the end of Semester." textFill="#0ca0eb" wrapText="true">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+      <ImageView fitHeight="169.0" fitWidth="477.0" layoutX="56.0" layoutY="168.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../../images/stdAssesment.png" />
          </image>
