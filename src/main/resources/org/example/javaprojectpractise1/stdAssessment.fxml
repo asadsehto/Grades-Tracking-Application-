@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="373.0" prefWidth="591.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.Resources">
+   <children>
+      <Label layoutX="10.0" layoutY="14.0" opacity="0.63" prefHeight="150.0" prefWidth="571.0" text="The performance of students is evaluated through a system of continuous testing spread over the entire period of studies. In addition to the final examination given at the end of each semester, students are tested through two term examinations, a series of short quizzes, class discussions, written assignments, research reports, etc., all of which contribute to the final grade. Term examinations are administered twice in a semester (Spring/Fall). . A student sits through two such examinations for each course every semester. A number of quizzes are taken during the semester to monitor the performance of the students. To rate students' academic performance &amp; (CGPA) is computed at the end of Semester." wrapText="true" />
+      <ImageView fitHeight="169.0" fitWidth="477.0" layoutX="57.0" layoutY="164.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/stdAssesment.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="478.0" layoutY="318.0" mnemonicParsing="false" onAction="#closebuttonHandle" prefHeight="26.0" prefWidth="82.0" style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" text="Close" />
+   </children>
+</AnchorPane>

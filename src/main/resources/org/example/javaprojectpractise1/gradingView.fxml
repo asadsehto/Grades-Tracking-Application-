@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="451.0" prefWidth="459.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.javaprojectpractise1.Resources">
+   <children>
+      <ImageView fitHeight="382.0" fitWidth="479.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../images/gradingPolicy.png" />
+         </image>
+      </ImageView>
+      <Button layoutX="350.0" layoutY="405.0" onAction="#closebuttonHandle"  style="-fx-background-color: #394456; -fx-text-fill: white; -fx-border-color: black; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.8), 10, 0, 0, 0);" mnemonicParsing="false" prefHeight="31.0" prefWidth="102.0" text="Close" />
+   </children>
+</AnchorPane>
